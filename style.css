@@ -1,22 +1,74 @@
 #movie-result {
-  background: rgb(244, 98, 181);
-  border: 5px solid black;
-  font-size: 24px;
+  background: rgb(143, 154, 123);
+  border: 5px solid rgb(235, 47, 29);
+  font-size: 60px;
   height: 160px;
   margin-top: 10px;
   margin-bottom: 20px;
+
+  font-family: "Honk", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "MORF" 15, "SHLN" 50;
 }
 
 #book-result {
-  background: rgb(196, 159, 255);
-  border: 5px solid black;
-  font-size: 24px;
+  background: rgb(155, 168, 118);
+  border: 5px solid rgb(235, 47, 29);
+  font-size: 60px;
   height: 160px;
   margin-top: 10px;
   margin-bottom: 20px;
+  font-family: "Honk", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "MORF" 15, "SHLN" 50;
+}
+
+#thing-result {
+  background: rgb(177, 181, 122);
+  border: 5px solid rgb(235, 47, 29);
+
+  font-size: 60px;
+  height: 160px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+
+  font-family: "Honk", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "MORF" 15, "SHLN" 50;
+}
+
+body {
+  background-image: url("https://static1.cbrimages.com/wordpress/wp-content/uploads/2019/04/Will-Byers-2.jpg");
+  background-size: 30%;
+  background-repeat: repeat;
+  background-attachment: fixed;
 }
 
 hr {
-  height: 5px;
-  background-color: black;
+  height: 6px;
+  background-color: green;
 }
+
+h1 {
+  font-family: "Nabla", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "EDPT" 200, "EHLT" 12;
+}
+
+label {
+  font-family: "Nabla", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "EDPT" 110, "EHLT" 12;
+}
+
+
