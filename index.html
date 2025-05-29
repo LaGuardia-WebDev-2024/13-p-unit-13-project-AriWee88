@@ -19,19 +19,65 @@ Select ONE Additional Feature to Add
     <meta charset="utf-8" />
     <title>Unit 13 Project</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Moirai+One&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Honk&family=Nabla:EDPT@107&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Honk&display=swap"
+      rel="stylesheet"
+    />
+    
+    
+    
+    <style> 
+      #luca {width:60px;}
+      
+      #harvest {width:60px;}
+       
+      #toph {width:60px;}
+      
+      
+    </style>
+    
+    
+    
   </head>
   <body>
     <h1>Quiz About [Me]</h1>
     <hr />
+ 
+    
+    <img id="luca" src="https://cdn.glitch.global/e8a9db9c-5101-4d7f-82e5-48d05904aac0/Capture.PNG?v=1748448150508">
+    
+    <img id="harvest" src="https://cdn.glitch.global/e8a9db9c-5101-4d7f-82e5-48d05904aac0/Screenshot%202025-05-22%20at%202.12.52%E2%80%AFAM.png?v=1747894390463">
+    
+    <img id="toph" src="https://cdn.glitch.global/e8a9db9c-5101-4d7f-82e5-48d05904aac0/Screenshot%202025-05-22%20at%202.22.14%E2%80%AFAM.png?v=1747894953326">
+    
+    
+    
     <!-- Movie Question -->
     <form id="movie-form">
       <label>
         🎥 What is my favorite movie?
         <select id="movie-answer">
-          <option value="movie1">movie 1</option>
-          <option value="movie2">movie 2</option>
-          <option value="movie3">movie 3</option>
-          <option value="movie4">movie 4</option>
+          <option value="movie1">From Up On Poppy Hill</option>
+          <option value="movie2">Song of the Sea</option>
+          <option value="movie3">LUCA</option>
+          <option value="movie4">Secret of Kells</option>
         </select>
       </label>
       <button type="submit">Check Movie Answer</button>
@@ -41,17 +87,33 @@ Select ONE Additional Feature to Add
     <!-- Book Question -->
     <form id="book-form">
       <label>
-        📖 What is my favorite book?
+        🎵 What is my favorite song?
         <select id="book-answer">
-          <option value="book1">book 1</option>
-          <option value="book2">book 2</option>
-          <option value="book3">book 3</option>
-          <option value="book4">book 4</option>
+          <option value="book1">Harvest Moon - Neil Young</option>
+          <option value="book2">Andromeda - Weyes Blood</option>
+          <option value="book3">My Lover is Sleeping - Wasia Project</option>
+          <option value="book4">Freelove - Depeche Mode </option>
         </select>
       </label>
       <button type="submit">Check Book Answer</button>
     </form>
     <div id="book-result"></div>
+
+    <form id="other-form">
+      <label>
+        📺 What is my favorite TV show?
+        <select id="thing-answer">
+          <option value="thing1">H2O: Just Add Water</option>
+          <option value="thing2">The Last of Us</option>
+          <option value="thing3">Arcane</option>
+          <option value="thing4">Avatar the Last Airbender</option>
+        </select>
+      </label>
+      <button type="submit">Check thing Answer</button>
+    </form>
+    <div id="thing-result"></div>
+    <hr />
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
       //Movie Question jQuery Code
@@ -61,10 +123,10 @@ Select ONE Additional Feature to Add
         var $answer = $("#movie-answer");
         var answer = $answer.val();
 
-        if (answer === "movie1") {
+        if (answer === "movie3") {
           $("#movie-result").text("YESSSS!");
         } else {
-          $("#movie-result").text("Try Again!");
+          $("#movie-result").text("no??");
         }
       });
 
@@ -76,11 +138,67 @@ Select ONE Additional Feature to Add
         var answer = $answer.val();
 
         if (answer === "book1") {
-          $("#book-result").text("YESSSS!");
+          $("#book-result").text("YES, CORRECT!! EGAD EGAD!!");
         } else {
-          $("#book-result").text("Try Again!");
+          $("#book-result").text("Try Again.");
         }
       });
+
+      //other Question jQuery Code
+
+      $("#other-form").on("submit", function (event) {
+        event.preventDefault();
+
+        var $answer = $("#thing-answer");
+        var answer = $answer.val();
+
+        if (answer === "thing4") {
+          $("#thing-result").text("REJOICE!! YOU ARE CORRECT! I NEVER DOUBTED YOU!!");
+        } else {
+          $("#thing-result").text("what a disappointment... ");
+        }
+      });
+    </script>
+
+    <script>
+      $("h1").hide();
+      $("h1").slideDown(1000);
+
+      $("#movie-result").animate(
+        {
+          height: "400px",
+          width: "40%",
+        },
+        1500
+      );
+
+      $("#book-result").animate(
+        {
+          height: "400px",
+          width: "40%",
+        },
+        1500
+      );
+
+      $("#thing-result").animate(
+        {
+          height: "400px",
+          width: "40%",
+        },
+        1500
+      );
+      
+      
+      $("#seal").hide();
+      $("#seal").fadeIn(1500);
+            
+      $("#harvest").hide();
+      $("#harvest").fadeIn(1500);
+      
+      $("#toph").hide();
+      $("#toph").fadeIn(1500);
+      
+      
     </script>
   </body>
 
